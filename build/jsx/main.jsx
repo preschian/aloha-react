@@ -268,7 +268,7 @@ var history = new createHistory();
 
 ReactDOM.render(
 	<Router history={history}>
-		<Route path='/' component={App}>
+		<Route path='/aloha-react/dist' component={App}>
 			<IndexRoute component={OpenTable} />
 			<Route path='table' component={OpenTable} />
 			<Route path='infinite' component={CardItems} />
