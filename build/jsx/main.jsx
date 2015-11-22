@@ -45,8 +45,8 @@ var OpenTable = React.createClass({
 	componentWillMount: function() {
         $.get('assets/user-100.json', function(json) {
 			this.setState({
-				dataTable: JSON.parse(json).results,
-				filteredRows: JSON.parse(json).results
+				dataTable: json.results,
+				filteredRows: json.results
 			});
 		}.bind(this));
 	},
@@ -239,7 +239,7 @@ var CardItems = React.createClass({
 		$.get(source, function(json) {
 			for (var i = start; i < end; i++) {
 				this.setState({
-					items: this.state.items.concat(JSON.parse(json).results[i].user)
+					items: this.state.items.concat(json.results[i].user)
 				});
 			}
 		}.bind(this));
