@@ -11,7 +11,8 @@ var Route 			= require('react-router').Route;
 var IndexRoute		= require('react-router').IndexRoute;
 var Link 			= require('react-router').Link;
 var IndexLink 		= require('react-router').IndexLink;
-var createHistory	= require('history/lib/createBrowserHistory');
+var createHistory	= require('history/lib/createHistory');
+var useBasename		= require('history/lib/useBasename');
 
 var SortTypes = {
 	ASC: 'ASC',
@@ -264,11 +265,13 @@ var CardItems = React.createClass({
     }
 });
 
-var history = new createHistory();
+var history = useBasename(createHistory)({
+	basename: '/aloha-react/dist'
+});
 
 ReactDOM.render(
 	<Router history={history}>
-		<Route path='/aloha-react/dist' component={App}>
+		<Route path='/' component={App}>
 			<IndexRoute component={OpenTable} />
 			<Route path='table' component={OpenTable} />
 			<Route path='infinite' component={CardItems} />
