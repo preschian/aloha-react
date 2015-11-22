@@ -11,7 +11,7 @@ var Route 			= require('react-router').Route;
 var IndexRoute		= require('react-router').IndexRoute;
 var Link 			= require('react-router').Link;
 var IndexLink 		= require('react-router').IndexLink;
-var createHistory	= require('history/lib/createHistory');
+var createHistory	= require('history/lib/createBrowserHistory');
 var useBasename		= require('history/lib/useBasename');
 
 var SortTypes = {
