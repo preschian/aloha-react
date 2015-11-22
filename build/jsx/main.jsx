@@ -273,8 +273,8 @@ ReactDOM.render(
 	<Router history={history}>
 		<Route path='/' component={App}>
 			<IndexRoute component={OpenTable} />
-			<Route path='table' component={OpenTable} />
-			<Route path='infinite' component={CardItems} />
+			<Route path='/table' component={OpenTable} />
+			<Route path='/infinite' component={CardItems} />
 		</Route>
 	</Router>,
 	document.getElementById('app')
