@@ -1,104 +1,104 @@
-$accent			: #536DFE;
-$divider		: #B6B6B6;
-$primary		: #607D8B;
-$primary-dark	: #455A64;
-$primary-light	: #CFD8DC;
-$text-primary	: #212121;
-$text-secondary	: #727272;
+$accent         : #536DFE;
+$divider        : #B6B6B6;
+$primary        : #607D8B;
+$primary-dark   : #455A64;
+$primary-light  : #CFD8DC;
+$text-primary   : #212121;
+$text-secondary : #727272;
 
 @mixin border-radius {
-	border-radius: 0.125rem;
+    border-radius: 0.125rem;
 }
 
 @mixin box-shadow {
-	box-shadow: 0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16);
 }
 
 html {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 *, *:before, *:after {
-	box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 body {
-	background-color: $primary-light;
-	font-family: 'Noto Sans', sans-serif;
+    background-color: $primary-light;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 h1 {
-	text-align: center;
+    text-align: center;
 }
 
 .btn {
-	@include border-radius;
-	@include box-shadow;
-	background-color: $primary;
-	color: white;
-	display: inline-block;
-	margin-right: 1rem;
-	padding: 0.5rem 1.25rem;
-	transition-duration: 0.4s;
+    @include border-radius;
+    @include box-shadow;
+    background-color: $primary;
+    color: white;
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1.25rem;
+    transition-duration: 0.4s;
 
-	&:hover {
-		background-color: $primary-dark;
-	}
+    &:hover {
+        background-color: $primary-dark;
+    }
 
-	&:focus {
-		outline: none;
-	}
+    &:focus {
+        outline: none;
+    }
 }
 
 .container {
-	margin: 0 auto;
-	width: 60rem;
+    margin: 0 auto;
+    width: 60rem;
 }
 
 .card {
-	@include border-radius;
-	@include box-shadow;
-	background-color: white;
-	float: left;
-	margin: 0.75rem;
-	width: calc(33.33% - 2rem);
-	// width: 100%;
+    @include border-radius;
+    @include box-shadow;
+    background-color: white;
+    float: left;
+    margin: 0.75rem;
+    width: calc(33.33% - 2rem);
+    // width: 100%;
 
-	.card-image {
-		background-size: cover;
-		height: 18rem;
-		position: relative;
-	}
+    .card-image {
+        background-size: cover;
+        height: 18rem;
+        position: relative;
+    }
 
-	.card-info {
-		padding: 0.75rem 1rem;
+    .card-info {
+        padding: 0.75rem 1rem;
 
-		span {
-			display: block;
+        span {
+            display: block;
 
-			&:first-child {
-				font-weight: bold;
-				text-transform: capitalize;
-			}
-		}
-	}
+            &:first-child {
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+        }
+    }
 }
 
 .card-container {
-	margin-left: -0.75rem;
-	margin-right: -0.75rem;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
 }
 
 @keyframes loading {
     0% {
-		transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-		transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -110,50 +110,50 @@ h1 {
     bottom: 0;
     left: 0;
     z-index: 1;
-	opacity: 0;
-	visibility: hidden;
-	transition-duration: 0.4s;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 0.4s;
 
-	&.loading-show {
-		opacity: 1;
-		visibility: visible;
-	}
+    &.loading-show {
+        opacity: 1;
+        visibility: visible;
+    }
 
-	.loading-circle {
-		animation: loading 0.8s infinite linear;
-		border: 0.25rem solid rgba(white, 0.4);
-		border-left: 0.25rem solid white;
-		border-radius: 50%;
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		height: 3rem;
-		width: 3rem;
-	}
+    .loading-circle {
+        animation: loading 0.8s infinite linear;
+        border: 0.25rem solid rgba(white, 0.4);
+        border-left: 0.25rem solid white;
+        border-radius: 50%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 3rem;
+        width: 3rem;
+    }
 }
 
 .table {
-	@include border-radius;
-	@include box-shadow;
-	background-color: white;
-	margin-top: 2rem;
+    @include border-radius;
+    @include box-shadow;
+    background-color: white;
+    margin-top: 2rem;
 
-	input {
-		@include border-radius;
-		border-top: none;
-		border-right: none;
-		border-left: none;
-		border-bottom: 0.125rem solid $divider;
-		padding: 0.5rem 0.75rem;
-		width: 100%;
+    input {
+        @include border-radius;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 0.125rem solid $divider;
+        padding: 0.5rem 0.75rem;
+        width: 100%;
 
-		&:focus {
-			outline: none;
-		}
-	}
+        &:focus {
+            outline: none;
+        }
+    }
 
-	.table-container > div {
-		border: none;
-	}
+    .table-container > div {
+        border: none;
+    }
 }
