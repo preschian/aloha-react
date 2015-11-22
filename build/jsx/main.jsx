@@ -264,14 +264,14 @@ var CardItems = React.createClass({
     }
 });
 
-var history = new createHistory();
+var history = new createHistory({ basename: '/aloha-react/dist'});
 
 ReactDOM.render(
 	<Router history={history}>
-		<Route path='/aloha-react/dist' component={App}>
+		<Route path='/' component={App}>
 			<IndexRoute component={OpenTable} />
-			<Route path='/aloha-react/dist/table' component={OpenTable} />
-			<Route path='/aloha-react/dist/infinite' component={CardItems} />
+			<Route path='table' component={OpenTable} />
+			<Route path='infinite' component={CardItems} />
 		</Route>
 	</Router>,
 	document.getElementById('app')
